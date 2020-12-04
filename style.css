@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(2, 76, 95, 0.5),rgba(14, 6, 4, 10)) ,url(img/exploretheworld.jpg) center no-repeat;
+    background-size: cover;
+  
+   
+}
+
+.banner{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+   
+}
+.banner h1::after{
+    content: '';
+    width: 250%;
+    height:136px;
+    background: linear-gradient(to right,transparent,rgb(19, 25, 27),rgba(14, 6, 4, 10));
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: bannerAnim 2s linear forwards ;
+}
+@keyframes bannerAnim{
+    0% {right:0}
+    100% {right: -250%}
+}
+
+.banner h1{
+    color: white;
+    font-family: 'Tangerine', cursive;
+    font-weight: 100;
+    font-size: 120px;
+    margin-bottom: 100px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    padding-top: 5px;
+}
+.banner button{
+    width: 230px;
+    height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    background: linear-gradient(to right, #585151,#ffffff);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    animation: buttonAnim 2s 2.1s backwards;
+    transition: all .5s;
+    overflow: hidden;
+}
+.banner button:hover{
+    transform: perspective(500px) rotateY(15deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, .3);
+    background: linear-gradient(to left, #585151,#ffffff);
+}
+@keyframes buttonAnim{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+.banner button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(to right,transparent,#fff,transparent);
+    position: absolute;
+    transform: skewX(-30deg);
+    transition: left .5s;
+}
+.banner button:hover::before{
+    left: 100%
+}
+.slideshow-wrapper{
+    overflow: hidden;
+    opacity: 0;
+   visibility: hidden;
+    transition: opacity 3s;
+}
+.slideshow{
+    display: flex;
+    width: 600%;
+    height: 100%;
+    position: relative;
+    
+}
+@keyframes slideshow{
+    0%{left:0}
+    10%{left:0}
+    15%{left:-100%}
+    25%{left:-100%}
+    30%{left:-200%}
+    40%{left:-200%}
+    45%{left:-300%}
+    55%{left:-300%}
+    60%{left:-400%}
+    70%{left:-400%}
+    75%{left:-500%}
+    85%{left:-500%}
+    90%{left:-600%}
+    100%{left:-600%}
+  
+}
+.slide{
+    width: 100%;
+    height: 100vh;
+}
+.slide:nth-child(1){
+    background:linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) ,url(img/tower.jpg) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(2){
+    background: linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) ,url(img/maldives.jpeg) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(3){
+    background:linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) , url(img/london.jpeg) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(4){
+    background:linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) , url(img/phuket\ Thailand.jpeg) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(5){
+    background:linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) , url(img/seychelles.jpeg) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(6){
+    background:linear-gradient(100deg,rgba(38, 38, 38, .8),rgba(38,38,38, 0.5),transparent) , url(img/amsterdam.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+
+.content{
+    width: 600px;
+    position: relative;
+    top: 25%;
+    left: 5%;
+}
+
+
+.content h3{
+    font-family: 'Berkshire Swash';
+    font-size: 60px;
+    font-weight: 400;
+    color: rgb(248, 247, 247);
+}
+.content p{
+    font-family: 'chelsea market';
+    font-size: 20px;
+    font-weight: 100;
+    color:rgb(238, 222, 222);
+}
+.content button{
+    width: 180px;
+    padding: 10px 10px 0 0;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family:'Berkshire Swash' ;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: rgb(248, 247, 247);
+    border-bottom: 2px solid rgb(248, 247, 247);
+    cursor: pointer;
+}
+.content i{
+    margin-left: 8px;
+}
+@media(max-width:1436px)
+{
+    
+    .banner h1{
+        font-size: 90px;
+    }
+    .banner button{
+        width: 200px;
+        padding: 4px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .banner h1::after{
+        height: 100px;
+
+    }
+}
+@media(max-width:1078px)
+{
+    
+    .banner h1{
+        font-size: 70px;
+    }
+    .banner button{
+        width: 200px;
+        padding: 4px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .banner h1::after{
+        height: 80px;
+
+    }
+}
+@media(max-width:1000px)
+{
+    .container{
+        height: 500%;
+    }
+    .banner h1{
+        font-size: 70px;
+    }
+    .banner button{
+        width: 200px;
+        padding: 4px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .banner h1::after{
+        height: 82px;
+
+    }
+}
+@media(max-width:868px)
+{
+    .container{
+        height: 500%;
+    }
+    .banner h1{
+        font-size: 60px;
+    }
+    .banner button{
+        width: 180px;
+        padding: 4px;
+        font-size: 18px;
+        margin-top: 0;
+      
+    }
+    .banner h1::after{
+        height: 70px;
+
+    }
+}
+@media(max-width:588px)
+{
+   .banner h1{
+        font-size: 50px;
+    }
+    .banner button{
+        width: 180px;
+        padding: 4px;
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .banner h1::after{
+        height: 116px;
+
+    }
+}
+@media(max-width:408px)
+{
+    .banner h1{
+        font-size: 50px;
+    }
+    .banner button{
+       width: 120px;
+       padding: 1px;
+       height: 25px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+    .banner h1::after{
+        height: 115px;
+
+    }
+}
+
+@media(max-width:340px)
+{
+    .banner h1{
+        font-size: 40px;
+    }
+    .banner h1::after{
+        height: 90px;
+
+    }
+    .banner button{
+        width: 120px;
+        height: 25px;
+        padding: 2px;
+        font-size: 10px;
+        margin-top:0 ;
+    }
+}
